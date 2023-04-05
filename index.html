@@ -14,35 +14,41 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Agregar y quitar tareas</title>
+    <title>Lista de tareas</title>
   </head>
   <body>
     <header class="container">
-      <h1>Listar Tareas</h1>
+      <h1>Lista De Tareas</h1>
       <p>
         Agrega tareas con el boton "agregar", puedes eliminar una tarea
         presionando el boton "eliminar".
       </p>
-      <p>
-        Las tareas que agregues se mostraran en una lista.
-      </p>
+      <p>Las tareas que agregues se mostraran en una lista.</p>
       <hr />
     </header>
     <main>
-      <section class="container">
-        <form>
+      <section class="container card p-4">
+        <!--Ingreso de la tarea-->
+        <article class="container">
+          <form>
             <div class="form-floating">
-                <input type="text" class="form-control" id="inputTareas" placeholder="Tareas" required>
-                <label for="inputTareas">Ingresa una tarea</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputTareas"
+                placeholder="Tareas"
+                autocomplete="off"
+                required
+              />
+              <label for="inputTareas">Ingresa una tarea</label>
             </div>
-            <button class="btn btn-success my-2">Agregar</button>
-        </form>
-      </section>
-      <section class="container">
-        <h3>Lista de Tareas</h3>
-        <ul class="list-group">
-            
-        </ul>
+            <button type="button" class="btn btn-success my-2" id="botonAgregar">Agregar</button>
+          </form>
+        </article>
+        <!--Lista con las tareas-->
+        <article class="container" id="contenedorUl">
+          <ul class="list-group"></ul>
+        </article>
       </section>
     </main>
     <script
